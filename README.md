@@ -2,7 +2,7 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 1.0.0 · **Last updated:** 2026-10-14
+**Version:** 2.0.0 · **Last updated:** 2026-10-26
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -64,4 +64,5 @@ MIT — see the `LICENSE` file at the root of the repository.
 
 ## History
 
+- 2.0.0 — 2026-10-26: Story tab (narrative, route, plan from user-entered coordinates) and GEDCOM check/repair.
 - 1.0.0 — 2026-10-14: first version.

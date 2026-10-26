@@ -2,7 +2,7 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 1.0.0 · **Ultima actualizare:** 2026-10-14
+**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -19,7 +19,9 @@ Arbore este un program de genealogie care rulează integral în browser: persoan
 3. **Diagrame**: alege persoana de bază, tipul și numărul de generații. Săgeți = navigare între persoane, Enter = recentrare, Shift+Enter = fișa, `+`/`-`/`0` = zoom/potrivire; mouse (tragere, rotiță) și tactil (deplasare, ciupire). Export SVG/PNG, tipărire (și pe mai multe pagini la scara 1:1).
 4. **Rudenie**: alege două persoane; rezultatul dă termenul românesc, gradul canonic și civil și calea explicată.
 5. **Calitatea datelor**: rulează verificările, deschide persoana din raport, caută duplicate și îmbină cu **Anulează** disponibil.
-6. **Date și export**: criptare opțională cu parolă, opțiunile de confidențialitate la export, GEDCOM, JSON, CSV, raport tipăribil, **Șterge tot**.
+6. **Poveste** (nou în 2.0.0): alege o persoană și primești povestea ei asamblată din date (părinți, parteneri, copii, evenimente pe decenii, cu vârsta), parcursul între locuri în ordine cronologică și, dacă introduci tu coordonatele locurilor, un plan simplu (fără hartă de fundal, fără rețea). Export `.txt` și `.svg`; persoanele vii respectă masca de confidențialitate.
+7. **Calitatea datelor → Verifică și repară un fișier GEDCOM** (nou în 2.0.0): citește un `.ged` fără să modifice arborele, arată problemele (structură, referințe lipsă, date neinterpretabile) și poți descărca o variantă reparată.
+8. **Date și export**: criptare opțională cu parolă, opțiunile de confidențialitate la export, GEDCOM, JSON, CSV, raport tipăribil, **Șterge tot**.
 
 ## Ce NU face și limitele
 
@@ -29,7 +31,7 @@ Arbore este un program de genealogie care rulează integral în browser: persoan
 - Calendarele non-gregoriene se păstrează ca text și sunt tratate aproximativ în verificări.
 - Termenii de rudenie sunt doar în română (interfața e tradusă, terminologia nu); cazurile foarte complexe (căsătorii repetate între rude) primesc o descriere aproximativă sau calea cea mai scurtă. Nu este consultanță juridică sau religioasă.
 - Duplicatele sunt sugestii; verifică înainte de îmbinare.
-- Nu există hartă (locurile sunt doar o listă, fără geocodare).
+- Nu există hartă de fundal și nici geocodare: planul din „Poveste” folosește doar coordonatele introduse manual.
 - Fotografiile sunt opționale, redimensionate la cel mult 400 px și stocate ca `data:` în arbore; multe fotografii ocupă mult din cota browserului.
 - Parola de criptare nu este stocată: **parolă pierdută = date pierdute**.
 
@@ -64,4 +66,5 @@ MIT — vezi fișierul `LICENSE` din rădăcina depozitului.
 
 ## Istoric
 
+- 2.0.0 — 2026-10-26: fila Poveste (narațiune, parcurs, plan din coordonate introduse) și verificarea/repararea fișierelor GEDCOM.
 - 1.0.0 — 2026-10-14: prima versiune.

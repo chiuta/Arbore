@@ -2,8 +2,8 @@
   "schema": 1,
   "slug": "arbore",
   "name": "Arbore",
-  "version": "1.0.0",
-  "updated": "2026-10-14",
+  "version": "2.0.0",
+  "updated": "2026-10-26",
   "description": "Arbore: genealogie locală cu import și export GEDCOM 5.5.1, diagrame (pedigree, descendenți, clepsidră, evantai), calculator de rudenie cu denumiri românești, verificări de date și criptare opțională. Rulează local, nu trimite nimic.",
   "egress": [],
   "permissions": [
@@ -15,8 +15,8 @@
   "storageKeys": [
     "nodup"
   ],
-  "sizeBytes": 448119,
-  "sha256": "cb087b3ce5dfc4f77b48dde8d586417d779f13297c462063467f7301ccca4de4",
+  "sizeBytes": 514156,
+  "sha256": "1b2814e98b9c2b727350219db45541fa79ae74f589913b28f1ff80d7adb48fe4",
   "csp": {
     "present": true,
     "directives": {
@@ -61,12 +61,18 @@
     ]
   },
   "kit": {
-    "version": "1.1.1",
+    "version": "1.2.0",
     "modules": [
       "core",
       "label",
       "bundle"
     ]
   },
-  "selfSerializing": false
+  "selfSerializing": false,
+  "exceptions": [
+    {
+      "rule": "unprefixed-storage",
+      "reason": "Cheia „nodup” (perechi de duplicate respinse) este citită prin lsGet/lsSet, care adaugă prefixul fff.arbore.; verificarea statică vede doar litera cheii. Cheia există din versiunea 1.0.0 și nu se redenumește, ca să nu se piardă alegerile utilizatorilor."
+    }
+  ]
 }
