@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · **Português** · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versão:** 2.0.1 · **Última atualização:** 2026-10-27
+**Versão:** 2.1.0 · **Última atualização:** 2026-10-27
 
 **Estado:** estável · **Offline:** completo
 
@@ -30,7 +30,7 @@ O Arbore é um programa de genealogia que funciona inteiramente no navegador: pe
 - FamilySearch: a página FamilySearch Innovate (familysearch.org/innovate/export) indica que a exportação GEDCOM direta já não é suportada; descarrega-se através de aplicações parceiras de gestão da árvore e depois importa-se aqui o ficheiro .ged obtido. Os procedimentos mudam: confirme os passos atuais no site.
 - O formato GEDCOM varia entre serviços e programas. A importação não foi testada com uma exportação real do FamilySearch ou do MyHeritage, pelo que a compatibilidade não está garantida; os testes usam ficheiros GEDCOM escritos por nós. Depois de importar, verifique o relatório de importação e «Qualidade dos dados»; para pessoas vivas use o mascaramento na exportação.
 - PDF: prima «Imprimir» e escolha «Guardar como PDF» como destino na janela do navegador. A aplicação não inclui um gerador de PDF próprio (continua a ser um único ficheiro, sem dependências).
-- O anexo de documentos (certidões, PDF, digitalizações) não está incluído — planeado: guardados no navegador esgotariam depressa a quota, e ainda não existe uma abordagem compacta. Só são suportadas fotografias pequenas; as linhas OBJE do GEDCOM são mantidas na ida e volta.
+- Os documentos anexados (PDF, imagens, texto) ficam no IndexedDB do navegador, com limites: 3 MB por ficheiro, 10 por pessoa, 60 MB no total. Não estão cifrados (nem quando a árvore está), não fazem parte do GEDCOM e não estão incluídos na cópia JSON: transfira-os em separado. As fotografias continuam pequenas, dentro da árvore; as linhas OBJE do GEDCOM são mantidas na ida e volta.
 
 ## O que NÃO faz e limites
 

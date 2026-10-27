@@ -2,6 +2,14 @@
 
 Format: SemVer MAJOR.MINOR.PATCH. Date: AAAA-LL-ZZ.
 
+## 2.1.0 — 2026-10-27
+
+- **Documente atașate la persoane** (PDF, imagini JPEG/PNG/GIF/WebP, text simplu .txt). Secțiune nouă „Documente atașate” în fișa persoanei: atașare, descărcare, eliminare, previzualizare miniatură pentru imagini. Fișierele se păstrează într-un depozit separat din IndexedDB (`fff.arbore`, versiunea 2, depozitul `docs`); în arbore rămân doar metadate (id, nume, tip, mărime, dată), deci tipărirea, GEDCOM-ul și memoria arborelui nu cresc.
+- **Limite clare:** 3 MB pe fișier, 10 pe persoană, 60 MB în total, plus verificarea spațiului liber raportat de browser (`navigator.storage.estimate`) și tratarea `QuotaExceededError`. Tipul se determină după conținut (semnături PDF/JPEG/PNG/GIF/WebP; text doar pentru `.txt` valid UTF-8 fără octeți nuli), nu după extensie sau tipul declarat.
+- **Ce NU se întâmplă (documentat în aplicație și README):** documentele nu sunt criptate (nici când arborele este criptat; aplicația afișează un avertisment), nu intră în GEDCOM, nu sunt incluse în copia `.fff.json` (acolo rămân doar metadatele; după restaurare în alt browser apare „fișierul lipsește”) și nu sunt trimise nicăieri. Ștergerea persoanei nu șterge imediat fișierele (pentru a funcționa „Anulează”); butonul „Șterge fișierele orfane” din Date și export le elimină, iar „Șterge tot” golește și depozitul de documente. Persoanele mascate ca private la export nu poartă metadate de documente. La îmbinarea duplicatelor, documentele se unesc (în limita de 10).
+- Texte noi în 8 limbi (traducerile fr, it, es, pt, hu, de sunt automate, neverificate de vorbitori nativi). Limita nr. 10 din aplicație și README rescrisă.
+- Teste noi: `tests/docs.test.mjs`. PDF: neschimbat (Tipărește › Salvează ca PDF); nu s-a adăugat generator PDF propriu.
+
 ## 2.0.1 — 2026-10-27
 
 Doar texte și documentație (fără modificări de logică, parsare sau stocare).
