@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · **Italiano** · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versione:** 2.0.1 · **Ultimo aggiornamento:** 2026-10-27
+**Versione:** 2.1.0 · **Ultimo aggiornamento:** 2026-10-27
 
 **Stato:** stabile · **Offline:** completo
 
@@ -30,7 +30,7 @@ Arbore è un programma di genealogia che funziona interamente nel browser: perso
 - FamilySearch: la pagina FamilySearch Innovate (familysearch.org/innovate/export) indica che l’esportazione GEDCOM diretta non è più supportata; si scarica tramite app partner di gestione dell’albero e poi si importa qui il file .ged ottenuto. Le procedure cambiano: controlla i passaggi attuali sul sito.
 - Il formato GEDCOM varia tra servizi e programmi. L’importazione non è stata provata con un’esportazione reale di FamilySearch o MyHeritage, quindi la compatibilità non è garantita; i test usano file GEDCOM scritti da noi. Dopo l’importazione controlla il rapporto di importazione e «Qualità dei dati»; per le persone viventi usa la mascheratura in esportazione.
 - PDF: premi «Stampa» e scegli «Salva come PDF» come destinazione nella finestra del browser. L’app non ha un proprio generatore PDF (resta un unico file, senza dipendenze).
-- L’allegato di documenti (certificati, PDF, scansioni) non è incluso — pianificato: conservati nel browser esaurirebbero presto la quota, e un approccio compatto non esiste ancora. Sono supportate solo piccole foto; le righe OBJE del GEDCOM vengono mantenute nel round-trip.
+- I documenti allegati (PDF, immagini, testo) sono conservati nell’IndexedDB del browser, con limiti: 3 MB per file, 10 per persona, 60 MB in totale. Non sono cifrati (nemmeno quando l’albero lo è), non fanno parte del GEDCOM e non sono inclusi nella copia JSON: scaricali separatamente. Le foto restano piccole, nell’albero; le righe OBJE del GEDCOM vengono mantenute nel round-trip.
 
 ## Cosa NON fa e limiti
 

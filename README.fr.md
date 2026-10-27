@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 2.0.1 · **Dernière mise à jour :** 2026-10-27
+**Version :** 2.1.0 · **Dernière mise à jour :** 2026-10-27
 
 **État :** stable · **Hors ligne :** complet
 
@@ -30,7 +30,7 @@ Arbore est un logiciel de généalogie qui fonctionne entièrement dans le navig
 - FamilySearch : la page FamilySearch Innovate (familysearch.org/innovate/export) indique que l’export GEDCOM direct n’est plus pris en charge ; on télécharge via des applications partenaires de gestion d’arbre, puis on importe ici le fichier .ged obtenu. Les procédures changent : vérifiez les étapes actuelles sur le site.
 - Le format GEDCOM diffère selon les services et les logiciels. L’import n’a pas été testé avec un export réel de FamilySearch ou de MyHeritage ; la compatibilité n’est donc pas garantie, et les tests utilisent des fichiers GEDCOM écrits par nous. Après l’import, vérifiez le rapport d’import et « Qualité des données » ; pour les personnes vivantes, utilisez le masquage à l’export.
 - PDF : appuyez sur « Imprimer » et choisissez « Enregistrer au format PDF » comme destination dans la fenêtre du navigateur. L’application n’a pas de générateur PDF propre (elle reste un seul fichier, sans dépendances).
-- Le rattachement de documents (actes, PDF, scans) n’est pas inclus — prévu : stockés dans le navigateur, ils épuiseraient vite le quota, et une approche compacte n’existe pas encore. Seules de petites photos sont prises en charge ; les lignes OBJE du GEDCOM sont conservées à l’aller-retour.
+- Les documents joints (PDF, images, texte) sont conservés dans l’IndexedDB du navigateur, avec des limites : 3 Mo par fichier, 10 par personne, 60 Mo au total. Ils ne sont pas chiffrés (même quand l’arbre l’est), ne font pas partie du GEDCOM et ne sont pas inclus dans la sauvegarde JSON : téléchargez-les séparément. Les photos restent petites, dans l’arbre ; les lignes OBJE du GEDCOM sont conservées à l’aller-retour.
 
 ## Ce que l'application NE fait PAS, et ses limites
 

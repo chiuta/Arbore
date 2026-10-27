@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · **Deutsch** · [Magyar](README.hu.md)
 
-**Version:** 2.0.1 · **Zuletzt aktualisiert:** 2026-10-27
+**Version:** 2.1.0 · **Zuletzt aktualisiert:** 2026-10-27
 
 **Status:** stabil · **Offline:** vollständig
 
@@ -30,7 +30,7 @@ Arbore ist ein Genealogieprogramm, das vollständig im Browser läuft: Personen 
 - FamilySearch: Die Seite FamilySearch Innovate (familysearch.org/innovate/export) gibt an, dass der direkte GEDCOM-Export nicht mehr unterstützt wird; der Download erfolgt über Partner-Apps zur Stammbaumverwaltung, die erhaltene .ged-Datei wird dann hier importiert. Verfahren ändern sich: aktuelle Schritte auf der Website prüfen.
 - Das GEDCOM-Format unterscheidet sich je nach Dienst und Programm. Der Import wurde nicht mit einem echten Export von FamilySearch oder MyHeritage getestet, daher ist die Kompatibilität nicht garantiert; die Tests verwenden von uns geschriebene GEDCOM-Dateien. Prüfen Sie nach dem Import den Importbericht und „Datenqualität“; für lebende Personen die Maskierung beim Export nutzen.
 - PDF: „Drucken“ wählen und im Browserfenster als Ziel „Als PDF speichern“ einstellen. Die App hat keinen eigenen PDF-Generator (sie bleibt eine einzelne Datei ohne Abhängigkeiten).
-- Das Anhängen von Dokumenten (Urkunden, PDFs, Scans) ist nicht enthalten — geplant: im Browser gespeichert würden sie schnell das Speicherkontingent erschöpfen, und ein kompakter Ansatz existiert noch nicht. Nur kleine Fotos werden unterstützt; OBJE-Zeilen im GEDCOM bleiben beim Round-Trip erhalten.
+- Angehängte Dokumente (PDF, Bilder, Text) liegen in der IndexedDB des Browsers, mit Grenzen: 3 MB pro Datei, 10 pro Person, insgesamt 60 MB. Sie sind nicht verschlüsselt (auch nicht, wenn der Baum es ist), nicht Teil des GEDCOM und nicht in der JSON-Sicherung enthalten: lade sie separat herunter. Fotos bleiben klein, im Baum; OBJE-Zeilen im GEDCOM bleiben beim Round-Trip erhalten.
 
 ## Was die App NICHT kann, und Grenzen
 

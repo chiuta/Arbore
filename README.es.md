@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 2.0.1 · **Última actualización:** 2026-10-27
+**Versión:** 2.1.0 · **Última actualización:** 2026-10-27
 
 **Estado:** estable · **Sin conexión:** completo
 
@@ -30,7 +30,7 @@ Arbore es un programa de genealogía que funciona íntegramente en el navegador:
 - FamilySearch: la página FamilySearch Innovate (familysearch.org/innovate/export) indica que la exportación GEDCOM directa ya no es compatible; se descarga mediante aplicaciones asociadas de gestión del árbol y luego se importa aquí el archivo .ged obtenido. Los procedimientos cambian: comprueba los pasos actuales en el sitio.
 - El formato GEDCOM varía entre servicios y programas. La importación no se ha probado con una exportación real de FamilySearch o MyHeritage, así que la compatibilidad no está garantizada; las pruebas usan archivos GEDCOM escritos por nosotros. Tras importar, revisa el informe de importación y «Calidad de los datos»; para personas vivas usa el enmascarado al exportar.
 - PDF: pulsa «Imprimir» y elige «Guardar como PDF» como destino en la ventana del navegador. La aplicación no incluye un generador de PDF propio (sigue siendo un único archivo, sin dependencias).
-- La adjunción de documentos (certificados, PDF, escaneos) no está incluida — planificado: almacenados en el navegador agotarían pronto la cuota, y aún no existe un enfoque compacto. Solo se admiten fotos pequeñas; las líneas OBJE del GEDCOM se conservan en el viaje de ida y vuelta.
+- Los documentos adjuntos (PDF, imágenes, texto) se guardan en el IndexedDB del navegador, con límites: 3 MB por archivo, 10 por persona, 60 MB en total. No están cifrados (ni siquiera cuando el árbol lo está), no forman parte del GEDCOM y no se incluyen en la copia JSON: descárgalos por separado. Las fotos siguen siendo pequeñas, dentro del árbol; las líneas OBJE del GEDCOM se conservan en el viaje de ida y vuelta.
 
 ## Lo que NO hace y límites
 

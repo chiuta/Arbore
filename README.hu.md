@@ -2,7 +2,7 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.0.1 · **Utolsó frissítés:** 2026-10-27
+**Verzió:** 2.1.0 · **Utolsó frissítés:** 2026-10-27
 
 **Állapot:** stabil · **Offline:** teljes
 
@@ -30,7 +30,7 @@ Az Arbore egy teljes egészében a böngészőben futó családfakutató program
 - FamilySearch: a FamilySearch Innovate oldal (familysearch.org/innovate/export) szerint a közvetlen GEDCOM-export már nem támogatott; partneralkalmazásokon keresztül lehet letölteni, majd az így kapott .ged fájlt itt kell importálni. Az eljárások változnak: ellenőrizd az aktuális lépéseket az oldalon.
 - A GEDCOM formátum szolgáltatásonként és programonként eltér. Az importot nem teszteltük valódi FamilySearch- vagy MyHeritage-exporttal, ezért a kompatibilitás nem garantált; a tesztek általunk írt GEDCOM-fájlokat használnak. Import után ellenőrizd az importjelentést és az „Adatminőség” fület; az élő személyeknél használd az exportálási maszkolást.
 - PDF: nyomd meg a „Nyomtatás” gombot, és a böngésző ablakában válaszd célként a „Mentés PDF-ként” lehetőséget. Az alkalmazásnak nincs saját PDF-generátora (egyetlen fájl marad, függőségek nélkül).
-- Dokumentumok (anyakönyvi kivonatok, PDF-ek, szkennelések) csatolása nincs benne — tervezett: a böngészőben tárolva gyorsan kimerítenék a tárkvótát, kompakt megoldás pedig még nincs. Csak kis fényképek támogatottak; a GEDCOM OBJE sorai oda-vissza megmaradnak.
+- A csatolt dokumentumok (PDF, képek, szöveg) a böngésző IndexedDB-jében vannak, korlátokkal: fájlonként 3 MB, személyenként 10, összesen 60 MB. Nincsenek titkosítva (akkor sem, ha a fa az), nem részei a GEDCOM-nak és nem kerülnek a JSON-mentésbe: töltsd le őket külön. A fényképek kicsik maradnak, a fában; a GEDCOM OBJE sorai oda-vissza megmaradnak.
 
 ## Amit NEM tud, és korlátai
 
