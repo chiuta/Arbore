@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · **Français** · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version :** 2.0.0 · **Dernière mise à jour :** 2026-10-26
+**Version :** 2.0.1 · **Dernière mise à jour :** 2026-10-27
+
+**État :** stable · **Hors ligne :** complet
 
 Langues de l'interface : **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -20,6 +22,15 @@ Arbore est un logiciel de généalogie qui fonctionne entièrement dans le navig
 4. **Parenté** : choisissez deux personnes ; le résultat donne le terme roumain, le degré canonique et civil, et le chemin expliqué.
 5. **Qualité des données** : lancez les contrôles, ouvrez la personne depuis le rapport, cherchez les doublons et fusionnez avec **Annuler** disponible.
 6. **Données et export** : chiffrement facultatif par mot de passe, options de confidentialité à l'export, GEDCOM, JSON, CSV, rapport imprimable, **Tout supprimer**.
+
+## Import depuis FamilySearch / MyHeritage, PDF et documents
+
+- Arbore ne se connecte à aucun service en ligne : l’import se fait uniquement à partir d’un fichier GEDCOM (.ged) que vous avez téléchargé vous-même.
+- MyHeritage : selon un guide tiers (Filae), sur le site ouvrez « Family tree » › « Manage trees », choisissez « Export to GEDCOM » puis cliquez sur « Begin the export » ; les noms des menus peuvent changer avec le temps ou la langue du site.
+- FamilySearch : la page FamilySearch Innovate (familysearch.org/innovate/export) indique que l’export GEDCOM direct n’est plus pris en charge ; on télécharge via des applications partenaires de gestion d’arbre, puis on importe ici le fichier .ged obtenu. Les procédures changent : vérifiez les étapes actuelles sur le site.
+- Le format GEDCOM diffère selon les services et les logiciels. L’import n’a pas été testé avec un export réel de FamilySearch ou de MyHeritage ; la compatibilité n’est donc pas garantie, et les tests utilisent des fichiers GEDCOM écrits par nous. Après l’import, vérifiez le rapport d’import et « Qualité des données » ; pour les personnes vivantes, utilisez le masquage à l’export.
+- PDF : appuyez sur « Imprimer » et choisissez « Enregistrer au format PDF » comme destination dans la fenêtre du navigateur. L’application n’a pas de générateur PDF propre (elle reste un seul fichier, sans dépendances).
+- Le rattachement de documents (actes, PDF, scans) n’est pas inclus — prévu : stockés dans le navigateur, ils épuiseraient vite le quota, et une approche compacte n’existe pas encore. Seules de petites photos sont prises en charge ; les lignes OBJE du GEDCOM sont conservées à l’aller-retour.
 
 ## Ce que l'application NE fait PAS, et ses limites
 

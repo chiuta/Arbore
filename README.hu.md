@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · **Magyar**
 
-**Verzió:** 2.0.0 · **Utolsó frissítés:** 2026-10-26
+**Verzió:** 2.0.1 · **Utolsó frissítés:** 2026-10-27
+
+**Állapot:** stabil · **Offline:** teljes
 
 A felület nyelvei: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -20,6 +22,15 @@ Az Arbore egy teljes egészében a böngészőben futó családfakutató program
 4. **Rokonság**: válassz ki két személyt; az eredmény megadja a román kifejezést, a kánoni és a polgári fokot, valamint a magyarázott útvonalat.
 5. **Adatminőség**: futtasd az ellenőrzéseket, nyisd meg a személyt a jelentésből, keress duplikátumokat és vond össze a **Visszavonás** lehetőségével.
 6. **Adatok és export**: opcionális jelszavas titkosítás, adatvédelmi beállítások exportáláskor, GEDCOM, JSON, CSV, nyomtatható jelentés, **Összes törlése**.
+
+## Importálás a FamilySearch / MyHeritage szolgáltatásból, PDF és dokumentumok
+
+- Az Arbore nem csatlakozik egyetlen online szolgáltatáshoz sem: az import csak egy általad letöltött GEDCOM (.ged) fájlból működik.
+- MyHeritage: egy harmadik féltől származó útmutató (Filae) szerint az oldalon nyisd meg a „Family tree” › „Manage trees” menüt, válaszd az „Export to GEDCOM” lehetőséget, és kattints a „Begin the export” gombra; a menünevek idővel vagy az oldal nyelvétől függően eltérhetnek.
+- FamilySearch: a FamilySearch Innovate oldal (familysearch.org/innovate/export) szerint a közvetlen GEDCOM-export már nem támogatott; partneralkalmazásokon keresztül lehet letölteni, majd az így kapott .ged fájlt itt kell importálni. Az eljárások változnak: ellenőrizd az aktuális lépéseket az oldalon.
+- A GEDCOM formátum szolgáltatásonként és programonként eltér. Az importot nem teszteltük valódi FamilySearch- vagy MyHeritage-exporttal, ezért a kompatibilitás nem garantált; a tesztek általunk írt GEDCOM-fájlokat használnak. Import után ellenőrizd az importjelentést és az „Adatminőség” fület; az élő személyeknél használd az exportálási maszkolást.
+- PDF: nyomd meg a „Nyomtatás” gombot, és a böngésző ablakában válaszd célként a „Mentés PDF-ként” lehetőséget. Az alkalmazásnak nincs saját PDF-generátora (egyetlen fájl marad, függőségek nélkül).
+- Dokumentumok (anyakönyvi kivonatok, PDF-ek, szkennelések) csatolása nincs benne — tervezett: a böngészőben tárolva gyorsan kimerítenék a tárkvótát, kompakt megoldás pedig még nincs. Csak kis fényképek támogatottak; a GEDCOM OBJE sorai oda-vissza megmaradnak.
 
 ## Amit NEM tud, és korlátai
 

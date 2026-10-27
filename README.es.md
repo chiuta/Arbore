@@ -2,7 +2,9 @@
 
 [English](README.md) · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · **Español** · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versión:** 2.0.0 · **Última actualización:** 2026-10-26
+**Versión:** 2.0.1 · **Última actualización:** 2026-10-27
+
+**Estado:** estable · **Sin conexión:** completo
 
 Idiomas de la interfaz: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -20,6 +22,15 @@ Arbore es un programa de genealogía que funciona íntegramente en el navegador:
 4. **Parentesco**: elige dos personas; el resultado da el término rumano, el grado canónico y civil y el camino explicado.
 5. **Calidad de los datos**: ejecuta las comprobaciones, abre la persona desde el informe, busca duplicados y fusiona con **Deshacer** disponible.
 6. **Datos y exportación**: cifrado opcional con contraseña, opciones de privacidad al exportar, GEDCOM, JSON, CSV, informe imprimible, **Borrar todo**.
+
+## Importación desde FamilySearch / MyHeritage, PDF y documentos
+
+- Arbore no se conecta a ningún servicio en línea: la importación se hace solo desde un archivo GEDCOM (.ged) que descargues tú.
+- MyHeritage: según una guía de terceros (Filae), en el sitio abre «Family tree» › «Manage trees», elige «Export to GEDCOM» y pulsa «Begin the export»; los nombres de los menús pueden cambiar con el tiempo o según el idioma del sitio.
+- FamilySearch: la página FamilySearch Innovate (familysearch.org/innovate/export) indica que la exportación GEDCOM directa ya no es compatible; se descarga mediante aplicaciones asociadas de gestión del árbol y luego se importa aquí el archivo .ged obtenido. Los procedimientos cambian: comprueba los pasos actuales en el sitio.
+- El formato GEDCOM varía entre servicios y programas. La importación no se ha probado con una exportación real de FamilySearch o MyHeritage, así que la compatibilidad no está garantizada; las pruebas usan archivos GEDCOM escritos por nosotros. Tras importar, revisa el informe de importación y «Calidad de los datos»; para personas vivas usa el enmascarado al exportar.
+- PDF: pulsa «Imprimir» y elige «Guardar como PDF» como destino en la ventana del navegador. La aplicación no incluye un generador de PDF propio (sigue siendo un único archivo, sin dependencias).
+- La adjunción de documentos (certificados, PDF, escaneos) no está incluida — planificado: almacenados en el navegador agotarían pronto la cuota, y aún no existe un enfoque compacto. Solo se admiten fotos pequeñas; las líneas OBJE del GEDCOM se conservan en el viaje de ida y vuelta.
 
 ## Lo que NO hace y límites
 
