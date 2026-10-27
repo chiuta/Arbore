@@ -2,7 +2,9 @@
 
 [English](README.md) · **Română** · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Versiune:** 2.0.0 · **Ultima actualizare:** 2026-10-26
+**Versiune:** 2.0.1 · **Ultima actualizare:** 2026-10-27
+
+**Stare:** stabil · **Offline:** complet
 
 Limbile interfeței: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -22,6 +24,15 @@ Arbore este un program de genealogie care rulează integral în browser: persoan
 6. **Poveste** (nou în 2.0.0): alege o persoană și primești povestea ei asamblată din date (părinți, parteneri, copii, evenimente pe decenii, cu vârsta), parcursul între locuri în ordine cronologică și, dacă introduci tu coordonatele locurilor, un plan simplu (fără hartă de fundal, fără rețea). Export `.txt` și `.svg`; persoanele vii respectă masca de confidențialitate.
 7. **Calitatea datelor → Verifică și repară un fișier GEDCOM** (nou în 2.0.0): citește un `.ged` fără să modifice arborele, arată problemele (structură, referințe lipsă, date neinterpretabile) și poți descărca o variantă reparată.
 8. **Date și export**: criptare opțională cu parolă, opțiunile de confidențialitate la export, GEDCOM, JSON, CSV, raport tipăribil, **Șterge tot**.
+
+## Import din FamilySearch / MyHeritage, PDF și documente
+
+- Arbore nu se conectează la niciun serviciu online: importul se face doar dintr-un fișier GEDCOM (.ged) descărcat de tine.
+- MyHeritage: conform unui ghid terț (Filae), în site deschide „Family tree” › „Manage trees”, alege „Export to GEDCOM” și apasă „Begin the export”; denumirile din meniu pot diferi în timp sau în funcție de limba site-ului.
+- FamilySearch: pagina FamilySearch Innovate (familysearch.org/innovate/export) precizează că exportul GEDCOM direct nu mai este acceptat; descărcarea se face prin aplicații partenere de gestionare a arborelui, iar fișierul .ged obținut se importă aici. Procedurile se schimbă: verifică pașii actuali pe site.
+- Formatul GEDCOM diferă între servicii și programe. Nu am testat importul cu un export real de la FamilySearch sau MyHeritage, deci compatibilitatea nu este garantată; testele folosesc fișiere GEDCOM scrise de noi. După import verifică raportul de import și „Calitatea datelor”; pentru persoanele vii folosește mascarea la export.
+- PDF: apasă „Tipărește” și alege „Salvează ca PDF” ca destinație în fereastra browserului. Aplicația nu include un generator PDF propriu (rămâne un singur fișier, fără dependențe).
+- Atașarea de documente (certificate, PDF-uri, scanări) nu este inclusă — planificat: păstrate în browser ar epuiza rapid cota de stocare, iar o variantă compactă încă nu există. Sunt acceptate doar fotografii mici; liniile OBJE din GEDCOM se păstrează la round-trip.
 
 ## Ce NU face și limitele
 

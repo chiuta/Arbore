@@ -2,7 +2,9 @@
 
 **English** · [Română](README.ro.md) · [Français](README.fr.md) · [Italiano](README.it.md) · [Español](README.es.md) · [Português](README.pt.md) · [Deutsch](README.de.md) · [Magyar](README.hu.md)
 
-**Version:** 2.0.0 · **Last updated:** 2026-10-26
+**Version:** 2.0.1 · **Last updated:** 2026-10-27
+
+**Status:** stable · **Offline:** complete
 
 Interface languages: **Română, English, Français, Italiano, Español, Português (PT), Deutsch, Magyar**
 
@@ -20,6 +22,15 @@ Arbore is a genealogy program that runs entirely in the browser: persons (multip
 4. **Kinship**: choose two people; the result gives the Romanian term, the canonical and civil degree, and the explained path.
 5. **Data quality**: run the checks, open the person from the report, look for duplicates and merge with **Undo** available.
 6. **Data and export**: optional password encryption, privacy options at export, GEDCOM, JSON, CSV, printable report, **Delete everything**.
+
+## Importing from FamilySearch / MyHeritage, PDF and documents
+
+- Arbore does not connect to any online service: import works only from a GEDCOM (.ged) file that you download yourself.
+- MyHeritage: according to a third-party guide (Filae), on the site open “Family tree” › “Manage trees”, choose “Export to GEDCOM” and click “Begin the export”; menu names may differ over time or with the site language.
+- FamilySearch: the FamilySearch Innovate page (familysearch.org/innovate/export) states that direct GEDCOM export is no longer supported; you download through partner family-tree apps and then import the resulting .ged file here. Procedures change: check the current steps on the site.
+- The GEDCOM format differs between services and programs. Import has not been tested with a real export from FamilySearch or MyHeritage, so compatibility is not guaranteed; the tests use GEDCOM files we wrote ourselves. After importing, check the import report and “Data quality”; for living people use masking on export.
+- PDF: press “Print” and choose “Save as PDF” as the destination in the browser’s print window. The app has no PDF generator of its own (it stays a single file with no dependencies).
+- Attaching documents (certificates, PDFs, scans) is not included — planned: stored in the browser they would quickly exhaust the storage quota, and a compact approach does not exist yet. Only small photos are supported; OBJE lines in GEDCOM are kept on round-trip.
 
 ## What it does NOT do, and limits
 

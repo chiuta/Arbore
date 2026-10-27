@@ -12,6 +12,7 @@ const {chromium} = require('playwright');
 const here = path.dirname(fileURLToPath(import.meta.url));
 const URL_APP = pathToFileURL(path.join(here, '..', 'index.html')).href;
 const AXE = process.env.AXE_PATH || '/tmp/claude-0/-home-claude/78529928-3825-51c3-b9bd-0e81655ab6bc/scratchpad/sweep/node_modules/axe-core/axe.min.js';
+const APPV = JSON.parse(fs.readFileSync(path.join(here, '..', 'app.json'), 'utf8')); // versiunea/data se citesc din app.json
 const fx = n => fs.readFileSync(path.join(here, 'fixtures', n));
 const SAMPLE = fx('sample.ged').toString('utf8');
 const POPESCU = fx('familia-popescu.ged').toString('utf8');
@@ -58,10 +59,10 @@ console.log('1. Pornire, meta, CSP, rețea');
     manifest: document.querySelector('link[rel="manifest"]')?.getAttribute('href') || '',
     inline: document.querySelectorAll('[onclick],[onchange],[oninput],[onload]').length
   }));
-  ok('application-version 2.0.0', info.ver === '2.0.0', info.ver);
-  ok('last-updated 2026-10-26', info.upd === '2026-10-26', info.upd);
+  ok('application-version ' + APPV.version, info.ver === APPV.version, info.ver);
+  ok('last-updated ' + APPV.updated, info.upd === APPV.updated, info.upd);
   ok('meta description', info.desc);
-  ok('#app-version vizibil', info.vis === 'v 2.0.0 · 2026-10-26', info.vis);
+  ok('#app-version vizibil', info.vis === `v ${APPV.version} · ${APPV.updated}`, info.vis);
   ok('html[lang]=ro implicit', info.lang === 'ro', info.lang);
   ok('CSP: default-src none, connect-src none, hash script', /default-src 'none'/.test(info.csp) && /connect-src 'none'/.test(info.csp) && /script-src 'sha256-/.test(info.csp) && !/unsafe-eval/.test(info.csp) && !/script-src[^;]*unsafe-inline/.test(info.csp), info.csp);
   // PWA adăugat ulterior: manifestul trebuie să fie exact cel generat (nu o a doua sursă), iar handlerele inline rămân interzise
@@ -637,7 +638,7 @@ console.log('9. UI: diagrame, tastatură, limbi, ștergere');
   await p.click('#t-data');
   const [dj] = await Promise.all([p.waitForEvent('download'), p.click('#x-json')]);
   const bundle = JSON.parse(fs.readFileSync(await dj.path(), 'utf8'));
-  ok('export .fff.json: format fff-bundle', bundle.format === 'fff-bundle' && bundle.schema === 1 && bundle.app === 'arbore' && bundle.version === '2.0.0' && bundle.updated === '2026-10-26' && bundle.data, Object.keys(bundle));
+  ok('export .fff.json: format fff-bundle', bundle.format === 'fff-bundle' && bundle.schema === 1 && bundle.app === 'arbore' && bundle.version === APPV.version && bundle.updated === APPV.updated && bundle.data, Object.keys(bundle));
   ok('.fff.json: persoanele vii sunt mascate (implicit)', !JSON.stringify(bundle).includes('Alexandru'));
   // import JSON (copie completă) după ștergere
   await p.uncheck('#x-mask');
