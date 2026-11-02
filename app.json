@@ -15,8 +15,8 @@
   "storageKeys": [
     "nodup"
   ],
-  "sizeBytes": 548966,
-  "sha256": "5d2ab76e9a492299ac1ace1c70da271f37b8c0674bb64b61db2d6fee62152674",
+  "sizeBytes": 689350,
+  "sha256": "6c0caf2c26a807f5154a0752d62a4fe7733c43a9b68f44d737d37a1ccbd61674",
   "csp": {
     "present": true,
     "directives": {
@@ -57,7 +57,11 @@
     "modules": [
       "core",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "kit": {
@@ -65,7 +69,11 @@
     "modules": [
       "core",
       "label",
-      "bundle"
+      "bundle",
+      "qr",
+      "p2p",
+      "sync",
+      "history"
     ]
   },
   "selfSerializing": false,
