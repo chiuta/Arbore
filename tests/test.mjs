@@ -11,7 +11,7 @@ const require = createRequire('/opt/node-tools/package.json');
 const {chromium} = require('playwright');
 const here = path.dirname(fileURLToPath(import.meta.url));
 const URL_APP = pathToFileURL(path.join(here, '..', 'index.html')).href;
-const AXE = process.env.AXE_PATH || '/tmp/claude-0/-home-claude/78529928-3825-51c3-b9bd-0e81655ab6bc/scratchpad/sweep/node_modules/axe-core/axe.min.js';
+const AXE = process.env.AXE_PATH || process.env.FFF_AXE || '/tmp/claude-0/-home-claude/78529928-3825-51c3-b9bd-0e81655ab6bc/scratchpad/sweep/node_modules/axe-core/axe.min.js';
 const APPV = JSON.parse(fs.readFileSync(path.join(here, '..', 'app.json'), 'utf8')); // versiunea/data se citesc din app.json
 const fx = n => fs.readFileSync(path.join(here, 'fixtures', n));
 const SAMPLE = fx('sample.ged').toString('utf8');
@@ -76,7 +76,7 @@ console.log('1. Pornire, meta, CSP, rețea');
     const scr = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)].filter(m => !/\bsrc=/.test(m[1]) && !/type="application\/json"/.test(m[1]));
     ok('hash CSP independent pentru TOATE scripturile inline (kit, pwa, aplicație)', scr.length === 3 && (ss.match(/sha256-/g) || []).length === 3 && scr.every(m => ss.includes("'sha256-" + crypto.createHash('sha256').update(m[2], 'utf8').digest('base64') + "'")), scr.length);
     ok("CSP: manifest-src 'self', worker-src 'self' blob:", /manifest-src 'self'(;|$)/.test(csp) && /worker-src 'self' blob:(;|$)/.test(csp), csp);
-    for (const [mod, a] of [['build.mjs', 'check'], ['pwa/pwa.mjs', 'check']]) { const r = spawnSync(process.execPath, [path.resolve(here, '../../../fff-kit', mod), a, path.resolve(here, '..')], {encoding: 'utf8'}); ok(mod + ' ' + a, r.status === 0, r.stdout + r.stderr); }
+    for (const [mod, a] of [['build.mjs', 'check'], ['pwa/pwa.mjs', 'check']]) { const r = spawnSync(process.execPath, [path.resolve(process.env.FFF_KIT || path.resolve(here, '../../../fff-kit'), mod), a, path.resolve(here, '..')], {encoding: 'utf8'}); ok(mod + ' ' + a, r.status === 0, r.stdout + r.stderr); }
   }
   ok('bannerul de confidențialitate este vizibil', /nu face cereri de rețea|rămân pe acest/i.test(info.priv));
   ok('0 violări CSP', info.viol.length === 0, info.viol);
