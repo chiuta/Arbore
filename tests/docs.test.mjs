@@ -1,4 +1,4 @@
-// Teste Arbore 2.1.0: documente atașate (IndexedDB), limite, tip după conținut, descărcare, orfani, persistență.
+// Teste Arbore 2.1.1: documente atașate (IndexedDB), limite, tip după conținut, descărcare, orfani, persistență.
 // Rulare: node tests/docs.test.mjs
 import {createRequire} from 'node:module';
 import path from 'node:path';
