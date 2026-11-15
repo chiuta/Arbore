@@ -10,18 +10,19 @@
     "serviceWorker",
     "indexedDB",
     "localStorage",
-    "Web Crypto"
+    "Web Crypto",
+    "WebGL"
   ],
   "storageKeys": [
     "nodup"
   ],
-  "sizeBytes": 743460,
-  "sha256": "0ddb4d5748ab685403d58b308c47331aa0f884b09e80dde172e86742fab4c139",
+  "sizeBytes": 795503,
+  "sha256": "fb6865dfcc116eb9c4e62257d053a7d68196b1ef0f656a0806b9b1df03d2213f",
   "csp": {
     "present": true,
     "directives": {
       "default-src": "'none'",
-      "script-src": "sha256×3",
+      "script-src": "sha256×4",
       "style-src": "'unsafe-inline'",
       "img-src": "'self' data: blob:",
       "media-src": "data: blob:",
